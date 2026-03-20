@@ -35,6 +35,7 @@ import Asteroids from '../components/BackgroundEffects/Asteroids';
 import Blocks from '../components/BackgroundEffects/Blocks';
 import DayNight from '../components/BackgroundEffects/DayToNight';
 import Loop from '../components/BackgroundEffects/Loop';
+import DarkMode from "../components/BackgroundEffects/DarkMode";
 
 import Layout from "../components/ui/Layout";
 
@@ -71,6 +72,7 @@ const componentMap = {
   sidebar: Sidebar,
   skeleton: SkeletonLoading,
 
+  darkmode: DarkMode,
   fluid: Fluid,
   fireworks: Fireworks,
   codingrain: CodingRain,
