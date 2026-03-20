@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
-import Orb from "./Orb";
+import Orb from "./orb";
 import { Link } from "react-router-dom";
 export default function Hero() {
   const [hue, setHue] = useState(260);
