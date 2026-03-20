@@ -15,7 +15,7 @@ function App() {
       <Route path="/FeedbackToastNotification/:type" element={<Components />} />
       <Route path="/Filters/:type" element={<Components />} />
       <Route path="/Forms/:type" element={<Components />} />
-      <Route path="/Layout/:type" element={<Components />} />
+      <Route path="/Layouts/:type" element={<Components />} />
       <Route path="/TextAnimation/:type" element={<Components />} />
       <Route path="/BackgroundEffects/:type" element={<Components />} />
     </Routes>

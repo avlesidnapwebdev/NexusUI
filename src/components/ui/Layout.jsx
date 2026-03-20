@@ -4,7 +4,7 @@ import Sidebar from "../layout/sidebar";
 
 export default function Layout({ children }) {
   return (
-    <div className="h-screen flex flex-col bg-[#05010f] text-white">
+    <div className="h-screen flex flex-col bg-[#000000] text-white">
 
       <Header />
 
