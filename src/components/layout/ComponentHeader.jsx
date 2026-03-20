@@ -7,13 +7,15 @@ export default function ComponentHeader() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
-  const filtered = componentsList.filter((item) =>
-    item.name.toLowerCase().includes(query.toLowerCase())
+  // ✅ flatten grouped data
+  const flatList = componentsList.flatMap((section) => section.items);
+
+  const filtered = flatList.filter((item) =>
+    item.name.toLowerCase().includes(query.toLowerCase()),
   );
 
   return (
     <header className="h-16 border-b border-white/10 flex items-center justify-between px-6 bg-black text-white relative">
-
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Link to="/">
@@ -36,7 +38,7 @@ export default function ComponentHeader() {
           />
         </div>
 
-        {/* Dropdown Results */}
+        {/* Dropdown */}
         {query && (
           <div className="absolute top-12 left-0 w-60 bg-black border border-white/10 rounded-lg shadow-lg z-50">
             {filtered.length > 0 ? (
@@ -67,7 +69,6 @@ export default function ComponentHeader() {
       >
         <Github size={16} />
       </a>
-
     </header>
   );
 }

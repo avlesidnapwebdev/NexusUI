@@ -9,7 +9,15 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/components" element={<Components />} />
       <Route path="/templates" element={<Templates />} />
-      <Route path="/components/:type" element={<Components />} />
+      <Route path="/GettingStarted/:type" element={<Components />} />
+      <Route path="/Buttons/:type" element={<Components />} />
+      <Route path="/Cards/:type" element={<Components />} />
+      <Route path="/FeedbackToastNotification/:type" element={<Components />} />
+      <Route path="/Filters/:type" element={<Components />} />
+      <Route path="/Forms/:type" element={<Components />} />
+      <Route path="/Layout/:type" element={<Components />} />
+      <Route path="/TextAnimation/:type" element={<Components />} />
+      <Route path="/BackgroundEffects/:type" element={<Components />} />
     </Routes>
   );
 }

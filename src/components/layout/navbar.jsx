@@ -1,6 +1,6 @@
 import React from "react";
 import { Github, Layers, LayoutTemplate } from "lucide-react";
-import ThemeToggle from "../themetoggle";
+import ThemeToggle from "../ui/themetoggle";
 import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
