@@ -1,48 +1,67 @@
-import React, { useState, useEffect } from "react";
-
+import React from "react";
+import { Github, Layers, LayoutTemplate } from "lucide-react";
+import ThemeToggle from "../themetoggle";
+import { Link } from "react-router-dom";
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full flex justify-center transition-all duration-500 z-50 ${
-        scrolled ? "pt-4" : "pt-0"
-      }`}
-    >
+    <nav className="fixed top-0 left-0 w-full flex justify-center z-50 pt-4 px-4">
       <div
-        className={`flex items-center justify-between w-full max-w-6xl px-6 py-4 transition-all duration-500 ${
-          scrolled
-            ? "bg-black/70 backdrop-blur-lg rounded-full shadow-lg border border-white/10"
-            : "bg-transparent"
-        }`}
+        className="
+        flex items-center justify-between
+        w-full max-w-2xl
+        px-5 py-3
+        rounded-full
+        backdrop-blur-xl
+        border
+        shadow-lg
+        transition-colors duration-300
+
+        bg-white/60 border-black/10 text-black
+        dark:bg-black/60 dark:border-white/10 dark:text-white
+      "
       >
         {/* Logo */}
-        <div className="flex items-center gap-2 text-purple-400 font-bold text-lg">
-          <img src="/logo.png" alt="Logo" className="h-8 w-8" />
-          Nexus UI
-        </div>
+        <Link to="/">
+          <img src="/logo.webp" alt="Logo" className="h-12 w-12" />
+        </Link>
 
-        {/* Menu */}
-        <ul className="hidden md:flex gap-8 text-gray-300">
-          <li className="hover:text-white cursor-pointer">Home</li>
-          <li className="hover:text-white cursor-pointer">Docs</li>
-          <li className="hover:text-white cursor-pointer">Components</li>
-          <li className="hover:text-white cursor-pointer">Templates</li>
+        {/* Navigation */}
+        <ul className="flex items-center gap-6 text-sm mx-auto">
+          <li className="flex items-center gap-2 hover:text-purple-500 transition cursor-pointer">
+            <Layers size={18} />
+            <Link to="/components">Components</Link>
+          </li>
+
+          <li className="flex items-center gap-2 hover:text-purple-500 transition cursor-pointer">
+            <LayoutTemplate size={18} />
+            <Link to="/templates">Templates</Link>
+          </li>
         </ul>
 
-        {/* Button */}
-        <button className="bg-white text-black px-10 py-2 rounded-full text-sm font-medium hover:scale-105 transition">
-          Github
-        </button>
+        {/* Right Side */}
+        <div className="flex items-center gap-3">
+          {/* Theme Toggle */}
+          <div className=" flex items-center justify-center rounded-full border border-black/10 dark:border-white/10 bg-white/70 dark:bg-black/70">
+            <ThemeToggle />
+          </div>
+
+          {/* Github Button */}
+          <a
+            href="https://github.com/avlesidnapwebdev"
+            target="_blank"
+            className="
+              w-9 h-9 flex items-center justify-center
+              rounded-full
+              border
+              transition
+
+              bg-black text-white border-black/20
+              dark:bg-white dark:text-black dark:border-white/20
+            "
+          >
+            <Github size={18} />
+          </a>
+        </div>
       </div>
     </nav>
   );
