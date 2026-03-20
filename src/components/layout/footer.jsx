@@ -1,19 +1,21 @@
 import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
-
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
-    <footer className="bg-[#070016] border-t border-purple-900/20 text-gray-400">
+    <footer className="bg-black border-t border-purple-900/20 text-gray-400">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Logo + About */}
         <div className="text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start gap-2 text-purple-400 font-bold text-lg">
-            <img src="/logo.png" alt="Logo" className="h-8 w-8" />
+            <a href='#'>
+            <img src="/logo.webp" alt="Logo" className="h-8 w-8" />
+            </a>
             Nexus UI
           </div>
 
           <p className="mt-4 text-sm">
-            A library created with <span className="text-purple-400">❤</span> by{" "}
+            A library created with by{" "}
             <span className="text-purple-400 font-medium">Selvapandi</span>
           </p>
         </div>
@@ -23,21 +25,21 @@ export default function Footer() {
           <h3 className="text-white font-semibold mb-4">Pages</h3>
 
           <div className="flex flex-col gap-2 text-sm">
-            <a href="#" className="hover:text-white transition">
+            <Link to="/" className="hover:text-white transition">
               Home
-            </a>
+            </Link>
 
-            <a href="#" className="hover:text-white transition">
+            <Link to="/GettingStarted/docs" className="hover:text-white transition">
               Docs
-            </a>
+            </Link>
 
-            <a href="#" className="hover:text-white transition">
+            <Link to="/components" className="hover:text-white transition">
               Components
-            </a>
+            </Link>
 
-            <a href="#" className="hover:text-white transition">
+            <Link to="/templates" className="hover:text-white transition">
               Templates
-            </a>
+            </Link>
           </div>
         </div>
 
