@@ -18,6 +18,8 @@ function App() {
       <Route path="/Layouts/:type" element={<Components />} />
       <Route path="/TextAnimation/:type" element={<Components />} />
       <Route path="/BackgroundEffects/:type" element={<Components />} />
+      <Route path="/Projects/:type" element={<Components />} />
+      <Route path="/Utilities/:type" element={<Components />} />
     </Routes>
   );
 }

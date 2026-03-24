@@ -56,3 +56,7 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+aside {
+  will-change: transform;
+}

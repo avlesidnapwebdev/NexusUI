@@ -1,70 +1,74 @@
 import { Link, useParams } from "react-router-dom";
+import { X } from "lucide-react";
 import { componentsList } from "../componentData";
 
-export default function Sidebar() {
+export default function Sidebar({ open, setOpen }) {
   const { type } = useParams();
 
   return (
-    <aside className="w-64 h-full border-r border-white/10 bg-black text-gray-300 relative">
-      <div className="h-full overflow-y-auto p-6 scrollbar-hide">
-        {componentsList.map((section) => (
-          <div key={section.title} className="mb-8">
-            {/* Section Title */}
-            <h3 className="text-xs uppercase tracking-wide text-gray-500 mb-3">
-              {section.title}
-            </h3>
+    <>
+      {/* Overlay */}
+      {open && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={() => setOpen(false)}
+        />
+      )}
 
-            {/* Vertical Line Wrapper */}
-            <div className="relative pl-4">
-              {/* Vertical Line */}
-              <div className="absolute left-0 top-0 h-full w-[1px] bg-white/10" />
+      {/* Sidebar */}
+      <aside
+        className={`fixed lg:static z-50 top-0 left-0 h-full w-64 bg-black text-gray-300 border-r border-white/10 transform transition-transform duration-300
+        ${open ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
+      >
+        {/* Mobile Close */}
+        <div className="lg:hidden flex justify-between items-center p-4 border-b border-white/10">
+          <h2 className="text-sm font-semibold">Menu</h2>
+          <button onClick={() => setOpen(false)}>
+            <X size={20} />
+          </button>
+        </div>
 
-              <ul className="space-y-2">
-                {section.items.map((item) => {
-                  const isActive = type === item.slug;
+        {/* Content */}
+        <div className="h-full overflow-y-auto p-6 scrollbar-hide">
+          {componentsList.map((section) => (
+            <div key={section.title} className="mb-8">
+              <h3 className="text-xs uppercase tracking-wide text-gray-500 mb-3">
+                {section.title}
+              </h3>
 
-                  return (
-                    <li key={item.slug} className="relative">
-                      {/* 🔥 Active Vertical Line */}
-                      {isActive && (
-                        <div className="absolute -left-[13px] top-0 h-full w-[2px] bg-white rounded-full" />
-                      )}
+              <div className="relative pl-4">
+                <div className="absolute left-0 top-0 h-full w-[1px] bg-white/10" />
 
-                      {/* Active Dot (optional) */}
-                      {isActive && (
-                        <div className="absolute -left-[9px] top-2  bg-purple-500 rounded-full" />
-                      )}
+                <ul className="space-y-2">
+                  {section.items.map((item) => {
+                    const isActive = type === item.slug;
 
-                      <Link
-                        to={item.path}
-                        className={`flex items-center justify-between text-sm transition-all duration-200 ${
-                          isActive
-                            ? "text-white font-medium"
-                            : "hover:text-white text-gray-400"
-                        }`}
-                      >
-                        <span>{item.name}</span>
-
-                        {item.badge && (
-                          <span className="text-[10px] bg-white/10 px-2 py-[2px] rounded-md">
-                            {item.badge}
-                          </span>
+                    return (
+                      <li key={item.slug} className="relative">
+                        {isActive && (
+                          <div className="absolute -left-[13px] top-0 h-full w-[2px] bg-white rounded-full" />
                         )}
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
+
+                        <Link
+                          to={item.path}
+                          onClick={() => setOpen(false)}
+                          className={`flex items-center justify-between text-sm ${
+                            isActive
+                              ? "text-white font-medium"
+                              : "hover:text-white text-gray-400"
+                          }`}
+                        >
+                          <span>{item.name}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Bottom Fade */}
-      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-black to-transparent" />
-
-      {/* Top Fade */}
-      <div className="pointer-events-none absolute top-0 left-0 w-full h-5 bg-gradient-to-b from-black to-transparent" />
-    </aside>
+          ))}
+        </div>
+      </aside>
+    </>
   );
 }

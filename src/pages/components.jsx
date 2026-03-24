@@ -23,19 +23,27 @@ import Navbar from "../components/Layouts/Navbar";
 import MobileNavbar from "../components/Layouts/MobileNavbar";
 import BottomNavbar from "../components/Layouts/BottomNavbar";
 import Sidebar from "../components/Layouts/Sidebar";
-import SkeletonLoading from "../components/Layouts/SkeletonLoading";
-import Fluid from '../components/BackgroundEffects/Fluid';
-import Fireworks from '../components/BackgroundEffects/Fireworks';
-import CodingRain from '../components/BackgroundEffects/CodingRain';
-import RainEffect from '../components/BackgroundEffects/Rain';
-import Cosmic from '../components/BackgroundEffects/Cosmic';
-import Space from '../components/BackgroundEffects/Space';
-import Stars from '../components/BackgroundEffects/Stars';
-import Asteroids from '../components/BackgroundEffects/Asteroids';
-import Blocks from '../components/BackgroundEffects/Blocks';
-import DayNight from '../components/BackgroundEffects/DayToNight';
-import Loop from '../components/BackgroundEffects/Loop';
+import SkeletonLoading from "../components/Utilities/SkeletonLoading";
+import Fluid from "../components/BackgroundEffects/Fluid";
+import Fireworks from "../components/BackgroundEffects/Fireworks";
+import CodingRain from "../components/BackgroundEffects/CodingRain";
+import RainEffect from "../components/BackgroundEffects/Rain";
+import Cosmic from "../components/BackgroundEffects/Cosmic";
+import Space from "../components/BackgroundEffects/Space";
+import Stars from "../components/BackgroundEffects/Stars";
+import Asteroids from "../components/BackgroundEffects/Asteroids";
+import Blocks from "../components/BackgroundEffects/Blocks";
+import DayNight from "../components/BackgroundEffects/DayToNight";
+import Loop from "../components/BackgroundEffects/Loop";
 import DarkMode from "../components/BackgroundEffects/DarkMode";
+import LayeredMedia from "../components/Projects/Cards";
+import Timeline from "../components/Projects/Timeline";
+import AccordionStyle from "../components/Projects/AccordionStyle";
+import AnimateCounter from '../components/Utilities/Counter'
+import ScrollToTop from '../components/Utilities/ScrollToTop'
+
+
+
 
 import Layout from "../components/ui/Layout";
 
@@ -43,6 +51,13 @@ const componentMap = {
   blurtext: BlurText,
   splittext: SplitText,
   circulartext: CircularText,
+
+  counter : AnimateCounter,
+  scrolltotop: ScrollToTop,
+
+  layeredmedia: LayeredMedia,
+  accordionstyle: AccordionStyle,
+  timeline: Timeline,
 
   button3d: Button3D,
   button2d: Button2D,
@@ -70,7 +85,7 @@ const componentMap = {
   mobilenavbar: MobileNavbar,
   bottomnavbar: BottomNavbar,
   sidebar: Sidebar,
-  skeleton: SkeletonLoading,
+  skeletonloading: SkeletonLoading,
 
   darkmode: DarkMode,
   fluid: Fluid,
@@ -84,7 +99,6 @@ const componentMap = {
   blocks: Blocks,
   daynight: DayNight,
   loop: Loop,
-
 };
 
 export default function Components() {
@@ -92,7 +106,7 @@ export default function Components() {
   if (!type) {
     return <Navigate to="/GettingStarted/introduction" />;
   }
- const SelectedComponent = componentMap[type];
+  const SelectedComponent = componentMap[type];
 
   return (
     <Layout>

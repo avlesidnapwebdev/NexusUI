@@ -19,10 +19,11 @@ export default function DocsTemplate({
   };
 
   return (
-    <div className="max-w-4xl mx-auto space-y-10">
-
+    <div className="max-w-7xl space-y-10">
       {/* TITLE */}
-      <h1 className="text-4xl font-bold">{title}</h1>
+      <h1 className="bg-[#0a0a0a] border border-white/10 rounded-lg p-5 w-full md:w-fit text-4xl font-bold">
+        {title}
+      </h1>
 
       {/* OUTPUT */}
       <div>
@@ -84,10 +85,14 @@ export default function DocsTemplate({
               onClick={() => handleCopy(componentCode, "component")}
               className="absolute top-3 right-3"
             >
-              {copied === "component" ? <Check size={16} /> : <Copy size={16} />}
+              {copied === "component" ? (
+                <Check size={16} />
+              ) : (
+                <Copy size={16} />
+              )}
             </button>
 
-            <pre className="text-sm text-gray-300 overflow-x-auto">
+            <pre className="text-sm text-gray-300 whitespace-pre-wrap break-words leading-relaxed">
               <code>{componentCode}</code>
             </pre>
           </div>

@@ -1,7 +1,7 @@
 export default function Documents() {
   return (
     <div>
-      <h1 className="text-4xl font-semibold mb-6">Documentation</h1>
+      <h1 className="bg-[#0a0a0a] border border-white/10 rounded-lg p-4 w-full md:w-fit  overflow-x-auto text-4xl font-semibold mb-6">Documentation</h1>
 
       <p className="text-gray-400 leading-7 mb-10">
         Nexus UI provides a collection of reusable UI components that can be
@@ -9,7 +9,7 @@ export default function Documents() {
       </p>
 
       {/* Getting Started */}
-      <h2 className="text-2xl font-semibold mb-4">Getting Started</h2>
+      <h2 className="bg-[#0a0a0a] border border-white/10 rounded-lg p-4 w-full md:w-fit overflow-x-auto text-2xl font-semibold mb-4">Getting Started</h2>
 
       <ol className="list-decimal ml-6 space-y-3 text-gray-400 mb-10 leading-7">
         <li>Create a React project (Vite / CRA)</li>
@@ -21,7 +21,7 @@ export default function Documents() {
       </ol>
 
       {/* Usage */}
-      <h2 className="text-2xl font-semibold mb-4">Usage</h2>
+      <h2 className="bg-[#0a0a0a] border border-white/10 rounded-lg p-4 w-full md:w-fit  overflow-x-auto text-2xl font-semibold mb-4">Usage</h2>
 
       <p className="text-gray-400 mb-4 leading-7">
         Each component is designed to be independent. You can directly copy the
@@ -39,7 +39,7 @@ export default function App() {
       </div>
 
       {/* Customization */}
-      <h2 className="text-2xl font-semibold mb-4">Customization</h2>
+      <h2 className="bg-[#0a0a0a] border border-white/10 rounded-lg p-4 w-full md:w-fit overflow-x-auto text-2xl font-semibold mb-4">Customization</h2>
 
       <p className="text-gray-400 mb-4 leading-7">
         All components are built with Tailwind CSS, making them easy to
@@ -54,7 +54,7 @@ export default function App() {
       </ul>
 
       {/* Categories */}
-      <h2 className="text-2xl font-semibold mb-4">Component Categories</h2>
+      <h2 className="inline-block w-full md:w-fit bg-[#0a0a0a] border border-white/10 rounded-lg p-4 text-2xl md:text-2xl">Component Categories</h2>
 
       <ul className="space-y-2 text-gray-400 mb-10 leading-7">
         <li>• Layout (Navbar, Sidebar, Skeleton)</li>
@@ -68,7 +68,7 @@ export default function App() {
       </ul>
 
       {/* Best Practices */}
-      <h2 className="text-2xl font-semibold mb-4">Best Practices</h2>
+      <h2 className="bg-[#0a0a0a] border border-white/10 rounded-lg p-4 w-full md:w-fit overflow-x-auto text-2xl font-semibold mb-4">Best Practices</h2>
 
       <ul className="space-y-3 text-gray-400 mb-10 leading-7">
         <li>✔ Keep components modular</li>
@@ -78,7 +78,7 @@ export default function App() {
       </ul>
 
       {/* Conclusion */}
-      <h2 className="text-2xl font-semibold mb-4">Final Note</h2>
+      <h2 className="bg-[#0a0a0a] border border-white/10 rounded-lg p-4 w-full md:w-fit overflow-x-auto text-2xl font-semibold mb-4">Final Note</h2>
 
       <p className="text-gray-400 leading-7">
         Nexus UI is built for developers who value speed, simplicity, and clean

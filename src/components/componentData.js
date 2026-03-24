@@ -2,8 +2,36 @@ export const componentsList = [
   {
     title: "Getting Started",
     items: [
-      { name: "Introduction", slug: "introduction", path: "/GettingStarted/introduction" },
+      {
+        name: "Introduction",
+        slug: "introduction",
+        path: "/GettingStarted/introduction",
+      },
       { name: "Docs", slug: "docs", path: "/GettingStarted/docs" },
+    ],
+  },
+  {
+    title: "Projects",
+    items: [
+      { name: "Layered Media", slug: "layeredmedia", path: "/Projects/layeredmedia" },
+      { name: "AccordionStyle", slug: "accordionstyle", path: "/Projects/accordionstyle" },
+      { name: "Timeline", slug: "timeline", path: "/Projects/timeline" },
+    ],
+  },
+  {
+    title: "Utilities",
+    items: [
+      { name: "Animate Counter", slug: "counter", path: "/Utilities/counter" },
+      {
+        name: "Scroll To Top",
+        slug: "scrolltotop",
+        path: "/Utilities/scrolltotop",
+      },
+      {
+        name: "Skeleton Loading",
+        slug: "skeletonloading",
+        path: "/Utilities/skeletonloading",
+      },
     ],
   },
 
@@ -14,7 +42,7 @@ export const componentsList = [
   //     { name: "Mobile Navbar", slug: "mobilenavbar", path: "/Layouts/mobilenavbar" },
   //     { name: "Bottom Navbar", slug: "bottomnavbar", path: "/Layouts/bottomnavbar" },
   //     { name: "Sidebar Design", slug: "sidebar", path: "/Layouts/sidebar" },
-  //     { name: "Skeleton Loading", slug: "skeleton", path: "/Layouts/skeleton" },
+  //
   //   ],
   // },
 
@@ -55,7 +83,6 @@ export const componentsList = [
   //   ],
   // },
 
-
   // {
   //   title: "Text Animations",
   //   items: [
@@ -68,7 +95,11 @@ export const componentsList = [
   {
     title: "Background Effects",
     items: [
-      { name: "Dark Mode", slug: "darkmode", path: "/BackgroundEffects/darkmode" },
+      {
+        name: "Dark Mode",
+        slug: "darkmode",
+        path: "/BackgroundEffects/darkmode",
+      },
       // { name: "Fluid", slug: "fluid", path: "/BackgroundEffects/fluid" },
       // { name: "Fireworks", slug: "fireworks", path: "/BackgroundEffects/fireworks" },
       // { name: "Coding Rain", slug: "codingrain", path: "/BackgroundEffects/codingrain" },
