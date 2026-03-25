@@ -7,7 +7,7 @@ import Introduction from "../components/GettingStarted/Introduction";
 import Documents from "../components/GettingStarted/Documents";
 import Button3D from "../components/Buttons/Button3D";
 import Button2D from "../components/Buttons/Button2D";
-import GradientButton from "../components/Buttons/gradientButton";
+import GradientButton from "../components/Buttons/GradientButton";
 import GlassButton from "../components/Buttons/Glass";
 import SlidingCard from "../components/Cards/slidingCard";
 import Card3D from "../components/Cards/Card3D";
