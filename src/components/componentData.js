@@ -83,14 +83,15 @@ export const componentsList = [
   //   ],
   // },
 
-  // {
-  //   title: "Text Animations",
-  //   items: [
-  //     { name: "Blur Text", slug: "blurtext", path: "/TextAnimation/blurtext" },
-  //     { name: "Split Text", slug: "splittext", path: "/TextAnimation/splittext" },
-  //     { name: "Circular Text", slug: "circulartext", path: "/TextAnimation/circulartext" },
-  //   ],
-  // },
+  {
+    title: "Text Animations",
+    items: [
+      { name: "Text 3D", slug: "text3d", path: "/TextAnimation/text3d" },
+      { name: "Split Text", slug: "splittext", path: "/TextAnimation/splittext" },
+      { name: "Circular Text", slug: "circulartext", path: "/TextAnimation/circulartext" },
+      { name: "Glass Text", slug: "glasstext", path: "/TextAnimation/glasstext" },
+    ],
+  },
 
   {
     title: "Background Effects",

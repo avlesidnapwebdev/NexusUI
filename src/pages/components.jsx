@@ -1,9 +1,9 @@
 import { useParams, Navigate } from "react-router-dom";
 
-import BlurText from "../components/TextAnimation/blurtext";
+import GlassText from "../components/TextAnimation/GlassText";
 import SplitText from "../components/TextAnimation/splittext";
 import CircularText from "../components/TextAnimation/circulartext";
-import Introduction from "../components/GettingStarted/introduction";
+import Introduction from "../components/GettingStarted/Introduction";
 import Documents from "../components/GettingStarted/Documents";
 import Button3D from "../components/Buttons/Button3D";
 import Button2D from "../components/Buttons/Button2D";
@@ -41,6 +41,7 @@ import Timeline from "../components/Projects/Timeline";
 import AccordionStyle from "../components/Projects/AccordionStyle";
 import AnimateCounter from '../components/Utilities/Counter'
 import ScrollToTop from '../components/Utilities/ScrollToTop'
+import Text3d from '../components/TextAnimation/Text3d';
 
 
 
@@ -48,7 +49,8 @@ import ScrollToTop from '../components/Utilities/ScrollToTop'
 import Layout from "../components/ui/Layout";
 
 const componentMap = {
-  blurtext: BlurText,
+  text3d: Text3d,
+  glasstext: GlassText,
   splittext: SplitText,
   circulartext: CircularText,
 
